@@ -9,15 +9,16 @@
 <style>
   body {
     background: url(fondo.png) 0 0;
-    color: white;
     background-repeat:no-repeat;
-    background-size: 1450px;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
   }
 
   img {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
-    width: 200px;
+    width: 20%;
     height: auto;
   }
 
@@ -30,8 +31,11 @@
     display: flex;
     justify-content: center;
   }
+  #imagen{
+
+  }
   span{
-    font-size: 20px;
+    font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: center;
@@ -42,8 +46,8 @@
 </style>
 
 <body>
- <div>
-  <img src="logo.png" alt="logo summit">
+ <div id="imagen">
+  <img src="Logo.png" alt="logo summit">
  </div>
   <div style="padding:10px">
     <input type="file" name="myfile" id="photoupload" onchange="handleImage()" />
@@ -72,5 +76,6 @@
 </script>
 
 </html>
+
 
   
