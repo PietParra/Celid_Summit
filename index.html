@@ -23,25 +23,34 @@
   }
 
   input{
+     color: white;
      font-family: Helvetica;
-     font-size: 25px;
+     font-size: 20px;
+     
   }
 
   div{
     display: flex;
     justify-content: center;
   }
-  #imagen{
-
-  }
   span{
-    font-size: 15px;
+    color: white;
+    font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: center;
   }
   canvas{
-    margin: 10px;
+    margin: 0 auto;
+    display: block;
+    justify-content: center;
+  }
+  #texto_indicaciones{
+    font-size: 20px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
   }
 </style>
 
@@ -49,6 +58,14 @@
  <div id="imagen">
   <img src="logo.png" alt="logo summit">
  </div>
+ <div id="texto_indicaciones">
+ <p><strong>INDICACIONES</strong><br>
+    1. Sube tu mejor foto con forma cuadrada<br>
+    2. Haz click derecho sobre tu credencial<br>
+    3. Haz click derecho en ‘Guardar imagen como’<br>
+    4. Compártela en tus redes sociales
+  </p>
+  </div>
   <div style="padding:10px">
     <input type="file" name="myfile" id="photoupload" onchange="handleImage()" />
   </div>
@@ -69,7 +86,7 @@
       imageObj2.src = "fondo_celid.png";
       imageObj2.onload = function () {
         ctx.drawImage(imageObj2, 0, 0, 750, 800);
-        document.getElementById("download").textContent = "Descargar: Imagen clic derecho, Guardar imagen como, Comparte en tus redes sociales";
+        document.getElementById("download").textContent = "Listo, descarga!";
       }
     };
   }
